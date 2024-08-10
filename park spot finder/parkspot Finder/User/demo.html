@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Park Spot Finder</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#buy">Buy</button>
+        <div class="modal w-50 mt-2 ml-5" id="buy" style="margin-left:200px;">
+          <div class="modal-dailog">
+            <div class="modal-content w-75">
+              <div class="modal-header bg-primary"><h3 class="text-white">Buy Now</h3>
+                   <button class="btn btn-warning" data-dismiss="modal">close</button></div>
+
+
+
+              <div class="modal-body">
+                <p>Name of Qunt</p>
+                <input type="text" name="" style="width:100%;">
+
+                <p>Name</p>
+                <input type="text" name="" style="width:100%">
+
+                <p>Mobile</p>
+                <input type="text" name="" style="width:100%">
+
+                <p>Address</p>
+                <p><input type="text" name="" style="width:100%"></p>
+              </div>
+
+              <div class="modal-footer">
+                    <button class="btn btn-warning ml-0">Order Now</button>
+
+                       <button class="btn btn-danger">Cancel Order</button>
+              </div>    
+            </div>
+          </div>
+        
+  
+</body>
+</html>
+
+
+
+
+<form action="index.php" method="post"> 
+                 <div class="modal w-50 mt-3 ml-5" id="book">
+                   
+                   <div class="modal-dailog">
+                     <div class="modal-content">
+                       
+                        <div class="modal-header">
+                          <h3 class="text-center">Book Parking</h3>
+                          <?php print_r($_POST);?>
+                        </div>
+
+                        <div class="modal-body">
+                              
+                           <div class="row">
+                           
+                             <div class="col-md-6">
+                               <label class="text-dark">name</label>
+                               <input type="text" name="u_name" value="<?=$_SESSION['u_name'];?>" class="form-control">
+                             </div>
+
+                              <div class="col-md-6">
+                               <label class="text-dark">user id</label>
+                               <input type="text" name="u_id" value="<?=$_SESSION['u_id'];?>" class="form-control">
+                             </div>
+
+                                
+                                 <div class="col-md-6">
+                               <label class="text-dark">Slot No</label>
+                               <input type="text" name="slot_no" class="form-control">
+                             </div>
+
+                            <div class="col-md-6">
+                               <label class="text-dark">charge</label>
+                               <input type="text" name="charge" id="charge" class="form-control">
+                             </div>
+
+
+                              <div class="col-md-6">
+                               <label class="text-dark">Vehicle No</label>
+                               <input type="text" name="vehicle_no" class="form-control">
+                             </div>
+                             
+
+                              <div class="col-md-6">
+                               <label class="text-dark">Date</label>
+                               <input type="text" name="" class="form-control">
+                             </div>
+                            
+                            
+
+                              <div class="col-md-6">
+                               <label class="text-dark">liencene</label>
+                               <input type="file" name="" class="form-control">
+                             </div>
+
+                              <div class="col-md-6">
+                               <label class="text-dark">pvc</label>
+                               <input type="file" name="" class="form-control">
+                             </div>
+
+                             
+
+                              <div class="col-md-6">
+                               <label class="text-dark">Ariving time</label>
+                               <input type="time" name="time1"  class="form-control">
+                             </div>
+
+                               <div class="col-md-6">
+                               <label class="text-dark">Departure time</label>
+                               <input type="time"  name="time2" class="form-control">
+                             </div>
+
+
+                               
+                                
+                                
+                               
+
+                                    
+                            </div> <!--row close -->
+                              
+                        </div> <!-- modal body close -->
+
+                        <div class="modal-footer">
+                           <button class="btn btn-warning ml-0" >Order Now</button>
+
+                       <button class="btn btn-danger" data-dismiss="modal">Cancel Order</button>
+                        </div>
+
+
+                     </div>
+                   </div>
+                 </div>
+                   </form>
